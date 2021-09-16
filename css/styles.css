@@ -53,7 +53,7 @@ body {
   width: 90%; }
   @media (min-width: 860px) {
     .gutter {
-      width: 80%; } }
+      width: 85%; } }
 
 .attribution {
   font-size: 0.9rem;
@@ -65,11 +65,25 @@ body {
 
 .testimonials {
   margin-top: 6rem; }
+  @media (min-width: 860px) {
+    .testimonials {
+      margin-top: 3rem;
+      margin-bottom: 3rem; } }
+  @media (min-width: 860px) {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "daniel daniel jonathan kira" "janette patrick patrick kira";
+      gap: 2rem; } }
   .testimonials__item {
     background-color: #7541c8;
     margin-bottom: 2rem;
     border-radius: 1rem;
     padding: 2rem 2rem; }
+    @media (min-width: 860px) {
+      .testimonials__item {
+        margin-bottom: 0; } }
     .testimonials__item .avatar {
       display: flex;
       align-items: center; }
@@ -91,14 +105,22 @@ body {
       font-size: 1.6rem;
       font-weight: 600;
       color: #ecf2f8; }
+      @media (min-width: 1024px) {
+        .testimonials__item blockquote {
+          font-size: 1.7rem; } }
     .testimonials__item p {
       line-height: 1.6;
       font-size: 1.1rem;
       color: #b5b5b5; }
+  .testimonials__item:nth-child(1) {
+    grid-area: daniel; }
   .testimonials__item:nth-child(2) {
-    background-color: #48556a; }
+    background-color: #48556a;
+    grid-area: jonathan; }
     .testimonials__item:nth-child(2) img {
       border: 3px solid #677a98; }
+  .testimonials__item:nth-child(3) {
+    grid-area: janette; }
   .testimonials__item:nth-child(3), .testimonials__item:nth-child(5) {
     background-color: white; }
     .testimonials__item:nth-child(3) img, .testimonials__item:nth-child(5) img {
@@ -110,6 +132,9 @@ body {
     .testimonials__item:nth-child(3) p, .testimonials__item:nth-child(5) p {
       color: #7687a2; }
   .testimonials__item:nth-child(4) {
-    background-color: #19212e; }
+    background-color: #19212e;
+    grid-area: patrick; }
+  .testimonials__item:nth-child(5) {
+    grid-area: kira; }
 
 /*# sourceMappingURL=styles.css.map */

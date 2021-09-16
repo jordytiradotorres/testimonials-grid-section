@@ -1,11 +1,30 @@
 .testimonials {
   margin-top: 6rem;
 
+  @include mq(medium) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "janette patrick patrick kira";
+    gap: 2rem;
+  }
+
   &__item {
     background-color: $moderate-violet;
     margin-bottom: 2rem;
     border-radius: 1rem;
     padding: 2rem 2rem;
+
+    @include mq(medium) {
+      margin-bottom: 0;
+    }
 
     .avatar {
       display: flex;
@@ -39,6 +58,10 @@
       font-size: 1.6rem;
       font-weight: 600;
       color: $light-grayish-blue;
+
+      @include mq(large) {
+        font-size: 1.7rem;
+      }
     }
 
     p {
@@ -48,13 +71,23 @@
     }
   }
 
+  &__item:nth-child(1) {
+    grid-area: daniel;
+  }
+
   &__item:nth-child(2) {
     background-color: $very-dark-grayish-blue;
+    grid-area: jonathan;
 
     img {
       border: 3px solid lighten($very-dark-grayish-blue, 15);
     }
   }
+
+  &__item:nth-child(3) {
+    grid-area: janette;
+  }
+
   &__item:nth-child(3),
   &__item:nth-child(5) {
     background-color: $white;
@@ -76,5 +109,10 @@
   }
   &__item:nth-child(4) {
     background-color: $very-dark-blackish-blue;
+    grid-area: patrick;
+  }
+
+  &__item:nth-child(5) {
+    grid-area: kira;
   }
 }
