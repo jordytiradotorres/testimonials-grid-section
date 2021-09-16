@@ -61,7 +61,7 @@ body {
   bottom: 0;
   right: 0;
   padding: 0.5rem;
-  color: #ffffff; }
+  color: #19212e; }
 
 .testimonials {
   margin-top: 6rem; }
@@ -80,10 +80,21 @@ body {
     background-color: #7541c8;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    padding: 2rem 2rem; }
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 10; }
     @media (min-width: 860px) {
       .testimonials__item {
         margin-bottom: 0; } }
+    .testimonials__item .quotation {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      width: 145px;
+      z-index: -10; }
+      @media (min-width: 768px) {
+        .testimonials__item .quotation {
+          right: 5rem; } }
     .testimonials__item .avatar {
       display: flex;
       align-items: center; }
@@ -114,13 +125,28 @@ body {
       color: #b5b5b5; }
   .testimonials__item:nth-child(1) {
     grid-area: daniel; }
+    @media (min-width: 1440px) {
+      .testimonials__item:nth-child(1) p {
+        width: 520px; } }
+    .testimonials__item:nth-child(1) blockquote {
+      width: 272px; }
+      @media (min-width: 768px) {
+        .testimonials__item:nth-child(1) blockquote {
+          width: auto; } }
   .testimonials__item:nth-child(2) {
     background-color: #48556a;
     grid-area: jonathan; }
     .testimonials__item:nth-child(2) img {
       border: 3px solid #677a98; }
+    @media (min-width: 1024px) {
+      .testimonials__item:nth-child(2) p {
+        width: 210px; } }
   .testimonials__item:nth-child(3) {
     grid-area: janette; }
+    @media (min-width: 1024px) {
+      .testimonials__item:nth-child(3) blockquote,
+      .testimonials__item:nth-child(3) p {
+        width: 200px; } }
   .testimonials__item:nth-child(3), .testimonials__item:nth-child(5) {
     background-color: white; }
     .testimonials__item:nth-child(3) img, .testimonials__item:nth-child(5) img {
@@ -134,7 +160,13 @@ body {
   .testimonials__item:nth-child(4) {
     background-color: #19212e;
     grid-area: patrick; }
+    @media (min-width: 1440px) {
+      .testimonials__item:nth-child(4) p {
+        width: 520px; } }
   .testimonials__item:nth-child(5) {
     grid-area: kira; }
+    @media (min-width: 1024px) {
+      .testimonials__item:nth-child(5) p {
+        width: 210px; } }
 
 /*# sourceMappingURL=styles.css.map */

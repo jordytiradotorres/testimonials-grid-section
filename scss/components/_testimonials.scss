@@ -21,9 +21,23 @@
     margin-bottom: 2rem;
     border-radius: 1rem;
     padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
 
     @include mq(medium) {
       margin-bottom: 0;
+    }
+
+    .quotation {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      width: 145px;
+      z-index: -10;
+
+      @include mq(768px) {
+        right: 5rem;
+      }
     }
 
     .avatar {
@@ -73,6 +87,19 @@
 
   &__item:nth-child(1) {
     grid-area: daniel;
+
+    p {
+      @include mq(x-large) {
+        width: 520px;
+      }
+    }
+    blockquote {
+      width: 272px;
+
+      @include mq(768px) {
+        width: auto;
+      }
+    }
   }
 
   &__item:nth-child(2) {
@@ -82,10 +109,23 @@
     img {
       border: 3px solid lighten($very-dark-grayish-blue, 15);
     }
+
+    p {
+      @include mq(large) {
+        width: 210px;
+      }
+    }
   }
 
   &__item:nth-child(3) {
     grid-area: janette;
+
+    blockquote,
+    p {
+      @include mq(large) {
+        width: 200px;
+      }
+    }
   }
 
   &__item:nth-child(3),
@@ -110,9 +150,21 @@
   &__item:nth-child(4) {
     background-color: $very-dark-blackish-blue;
     grid-area: patrick;
+
+    p {
+      @include mq(x-large) {
+        width: 520px;
+      }
+    }
   }
 
   &__item:nth-child(5) {
     grid-area: kira;
+
+    p {
+      @include mq(large) {
+        width: 210px;
+      }
+    }
   }
 }

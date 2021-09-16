@@ -10,10 +10,6 @@ $white: hsl(0, 0%, 100%);
 $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
 
-// "Graduado verificado" tiene el mismo color que el nombre de la persona con un 50% de opacidad
-// 2. Los párrafos de revisión dentro de las citas también tienen el mismo color, pero tienen
-// una opacidad del 70%.
-
 $breakpoints: (
   small: 375px,
   medium: 860px,
